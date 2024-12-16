@@ -1,0 +1,712 @@
+@charset "UTF-8";
+
+html {
+    font-size: 100%;
+}
+
+body {
+    color: #333;
+    font-family: "Zen Old Mincho medium", serif;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: 0.1em;
+}
+
+img {
+    vertical-align: bottom;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+    color: #333
+}
+
+li {
+    list-style: none;
+}
+
+#wrapper {
+    max-width: 100%;
+}
+
+/* header */
+#header {
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.mainvisual {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.list-pc {
+    width: 100%;
+    height: 150px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    z-index: 20;
+    position: absolute;
+}
+
+h1 img {
+    width: 150px;
+    height: 150px;
+}
+
+.slide-box {
+    display: flex;
+    width: 85%;
+    margin: 0 auto;
+    justify-content: space-between;
+    z-index: 30;
+}
+
+nav .slide {
+    width: 15%;
+    height: 100px;
+    background-color: rgba(254, 254, 254, 0.7);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 2s ease;
+}
+
+
+.slide:hover {
+    background-color: rgba(254, 254, 254, 1);
+    transform: scale(1.2,1.2);
+}
+
+nav .slide a {
+    width: 130px;
+    height: 50px;
+    margin: 0 auto;
+    font-size: 0.875rem;
+    font-weight: 1000;
+    position: relative;
+}
+
+nav .slide a::before {
+    position: absolute;
+    border-bottom: 5px solid #363b4d;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    content: "";
+}
+
+
+.list-mobile {
+    opacity: 0;
+}
+
+.fade li img {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 0;
+}
+
+.mainvisual .fade li {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    animation: fade 15s infinite;
+}
+
+.mainvisual .fade li:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.mainvisual .fade li:nth-child(2) {
+    animation-delay: 5s;
+}
+
+.mainvisual .fade li:nth-child(3) {
+    animation-delay: 10s;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    45% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.text-box {
+    width: 580px;
+    height: 270px;
+    background: rgba(254, 254, 254, 0.9);
+    color: #333;
+    position: absolute;
+    top: 60%;
+    left: 3%;
+    transform: translate(0%, -6%);
+    padding: 15px;
+    z-index: 50;
+}
+
+.text {
+    margin-top: 15px;
+}
+
+.text h2 {
+    font-size: 2rem;
+    margin-left: 30px;
+}
+
+.text p {
+    font-size: 1.25rem;
+    margin: 10px 37px 0px;
+}
+
+/* main */
+.slideIn {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: 0.5s;
+}
+
+/* section title */
+.container {
+    height: 150px;
+}
+
+.section-title {
+    position: relative;
+    font-size: 2.25rem;
+    height: 60px;
+    margin: 70px auto;
+    text-align: center;
+}
+
+.section-title::before {
+    position: absolute;
+    border-bottom: 1px solid #333;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    content: "";
+}
+
+
+article {
+    display: flex;
+    height: 350px;
+}
+
+article .item {
+    width: 50%;
+}
+
+article img {
+    width: 100%;
+    height: 350px;
+}
+
+.contents {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.inner {
+    width: 70%;
+    height: 70px;
+    display: flex;
+    margin: 20px auto;
+    background: linear-gradient(to right, #b3ffec, #b3e0ff);
+    border-radius: 50px;
+    justify-content: center;
+    padding: 5px 0;
+}
+
+.inner .namber {
+    font-size: 2.5rem;
+    padding: 0 20px;
+}
+
+.contents dl {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 1.25rem;
+}
+
+.contents dt {
+    width: 70%;
+}
+
+.contents dd {
+    width: 30%;
+}
+
+
+.inner .course {
+    font-size: 1.5rem;
+    align-items: center;
+    margin-bottom: auto;
+    margin-top: 12px;
+}
+
+/* modal */
+
+.modaal .detail dl {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: #666 1px dotted;
+}
+
+.modaal .detail dl dt {
+    width: 75%;
+}
+
+.modaal .detail dl dd {
+    width: 25%;
+}
+
+.modaal .most-detail dl {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: #666 1px dotted;
+}
+
+.modaal .most-detail dl dt {
+    border-bottom: #666 1px dotted;
+}
+
+.modaal .most-detail dl dd {
+    border-bottom: #666 1px dotted;
+}
+
+.modaal .most-detail dt:last-of-type {
+    border-bottom: none;
+}
+
+.modaal .most-detail dl dd:last-child {
+    border-bottom: none;
+}
+
+
+.openModaal {
+    width: 40%;
+    margin: 10px auto;
+    text-align: center;
+    display: block;
+    position: relative;
+    border-radius: 50px;
+    justify-content: center;
+    padding: 5px 0;
+    transition: all 1s ease;
+    border: #666 1px solid;
+}
+
+
+.openModaal:hover {
+    color: #fff;
+    transition: all 1s ease;
+    background: #666;
+    border: #fff 1px solid;
+}
+
+.course {
+    font-size: 2.5rem;
+}
+
+/* gallery */
+.album {
+    max-width: 100%;
+    margin: 0 8%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.album .picture img {
+    width: 100%;
+    height: 500px;
+}
+
+
+/* access */
+.display {
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 8%;
+}
+
+.map {
+    width: 55%;
+    filter: grayscale(100%);
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.access {
+    width: 40%;
+}
+
+.access .site-title {
+    text-align: center;
+}
+
+.accesspoint {
+    width: 340px;
+    font-size: 1.25rem;
+    margin: 30px auto;
+}
+
+/* footer */
+#footer ul {
+    display: flex;
+    margin: 100px 15% 30px 15%;
+    justify-content: end;
+}
+
+#footer li {
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+#footer li a {
+    padding-right: 40px;
+}
+
+#footer li a:hover {
+    color: gray;
+    transition: color 1s;
+}
+
+#footer li i {
+    width: 50px;
+    font-size: 2rem;
+}
+
+#footer li i:hover {
+    color: gray;
+    transition: color 1s;
+}
+
+/* 上に戻るボタン */
+.to-top {
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+    border-radius: 50%;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+}
+
+.to-top::after {
+    content: "";
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #fff;
+    position: relative;
+    left: 17px;
+    bottom: 3px;
+}
+
+.footernav p {
+    text-align: center;
+    margin: 20px auto;
+}
+
+/* responsive */
+@media (max-width: 1461px) {
+
+    .contents dl {
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        margin: 0 auto;
+        font-size: 1.25rem;
+    }
+
+    .contents dt {
+        width: 75%;
+    }
+
+    .contents dd {
+        width: 25%;
+    }
+}
+
+@media (max-width: 1220px) {
+    .album {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 890px) {
+
+    /* トップメニューリスト 
+上部リストを非表示、ハンバーガーメニュー配置*/
+    .list-pc {
+        opacity: 0;
+    }
+
+    .list-mobile {
+        opacity: 50;
+    }
+
+    .mobile {
+        opacity: 50;
+        position: relative;
+    }
+
+    /*
+ハンバーガ―メニュー
+*/
+    .hamburger {
+        position: absolute;
+        background-color: #fff;
+        cursor: pointer;
+        width: 60px;
+        height: 60px;
+        opacity: 0.8;
+        top: 0;
+        right: 0;
+        z-index: 110;
+        transition: 0.3s;
+    }
+
+    /* ハンバーガーメニューの線の設定（メニューが閉じている時） */
+    .hamburger span {
+        position: absolute;
+        background: #333;
+        width: 50%;
+        height: 2px;
+        left: 25%;
+        transition: 0.3s;
+    }
+
+    .hamburger .hamburger-text {
+        opacity: 1;
+        text-align: center;
+        padding: 32px 0;
+    }
+
+    .hamburger .hamburger-text2 {
+        opacity: 0;
+    }
+
+
+    /* 1本目の線の位置を設定 */
+    .hamburger span:nth-child(1) {
+        top: 21%;
+    }
+
+    /* 2本目の線の位置を設定 */
+    .hamburger span:nth-child(2) {
+        top: 35%;
+        width: 35%;
+    }
+
+    /* 3本目の線の位置を設定 */
+    .hamburger span:nth-child(3) {
+        top: 49%;
+        width: 20%;
+    }
+
+    /*
+  ハンバーガーメニューの線の設定（メニューが開いている時）
+
+    /* 2本目と3本目は右にスライド*/
+    .open .hamburger span:nth-child(2) {
+        transform: translateX(8px);
+    }
+
+    .open .hamburger span:nth-child(3) {
+        transform: translateX(17px);
+    }
+
+    .open .hamburger .hamburger-text {
+        opacity: 0;
+        padding: 0;
+    }
+
+    .open .hamburger .hamburger-text2 {
+        opacity: 1;
+        text-align: center;
+        padding: 5px 0;
+    }
+
+    /*
+  メニューの設定
+  最初は閉じている状態なので、「opacity: 0;」「visibility: hidden;」
+  で要素を非表示にしておく
+  */
+
+    #navi {
+        width: 100%;
+        height: 100vh;
+        background-color: #AAD5CE;
+        color: #333;
+        position: absolute;
+        padding-top: 30%;
+        margin: 0 auto;
+        left: 0;
+        z-index: 100;
+        text-align: center;
+        transition: all 0.3s ease;
+        opacity: 1;
+        visibility: hidden;
+    }
+
+    /*
+  ハンバーガーメニューがクリックされた際に、jQueryでheaderにopenクラスを追加して、
+  メニューを表示させる。
+  */
+    .open #navi {
+        opacity: 1;
+        visibility: visible;
+    }
+
+
+    #navi a {
+        display: block;
+    }
+
+    #navi li i {
+        width: 50px;
+        font-size: 2rem;
+    }
+
+    #navi li i:hover {
+        color: gray;
+        transition: color 1s;
+    }
+
+    #navi ul {
+        width: 200px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    #navi li {
+        height: 80px;
+        align-items: center;
+    }
+
+    #navi li a:hover {
+        color: gray;
+        transition: color 1s;
+    }
+
+    #navi ul img {
+        width: 100px;
+    }
+
+
+    /* メニューの縦並び */
+    article {
+        flex-direction: column;
+        height: 700px;
+    }
+
+    article .item {
+        width: 100%;
+    }
+
+    .contents {
+        width: 100%;
+    }
+
+    article img {
+        height: 350px;
+    }
+
+    /* メニューの配置入れ替え */
+    .cross {
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+    }
+
+    /* ギャラリーimgの配置 */
+    .album {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .text-box {
+        width: 400px;
+        height: 240px;
+        top: 60%;
+        left: 5%;
+    }
+
+    .text h2 {
+        font-size: 1.725rem;
+    }
+
+    .text p {
+        font-size: 1.375rem;
+    }
+
+    .album {
+        grid-template-columns: 1fr;
+    }
+
+    .display {
+        flex-direction: column;
+        height: 700px;
+    }
+
+    .map {
+        width: 100%;
+        height: 400px;
+    }
+
+    .map iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+    .access {
+        margin-top: 30px;
+    }
+
+    .access .site-title img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .accesspoint {
+        width: 340px;
+        font-size: 1.25rem;
+        margin: 30px auto;
+    }
+
+
+}
