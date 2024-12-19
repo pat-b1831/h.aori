@@ -79,7 +79,7 @@ nav .slide {
 
 .slide:hover {
     background-color: rgba(254, 254, 254, 1);
-    transform: scale(1.2,1.2);
+    transform: scale(1.2, 1.2);
 }
 
 nav .slide a {
@@ -200,7 +200,7 @@ nav .slide a::before {
     position: relative;
     font-size: 2.25rem;
     height: 60px;
-    margin: 70px auto;
+    margin: 0px auto;
     text-align: center;
 }
 
@@ -218,6 +218,8 @@ nav .slide a::before {
 article {
     display: flex;
     height: 350px;
+
+    /* border: orange 1px solid; */
 }
 
 article .item {
@@ -250,6 +252,13 @@ article img {
     padding: 0 20px;
 }
 
+.inner .course {
+    font-size: 1.5rem;
+    align-items: center;
+    /* margin-bottom: auto; */
+    margin-top: 12px;
+}
+
 .contents dl {
     display: flex;
     flex-wrap: wrap;
@@ -266,13 +275,6 @@ article img {
     width: 30%;
 }
 
-
-.inner .course {
-    font-size: 1.5rem;
-    align-items: center;
-    margin-bottom: auto;
-    margin-top: 12px;
-}
 
 /* modal */
 
@@ -444,7 +446,7 @@ article img {
 }
 
 /* responsive */
-@media (max-width: 1461px) {
+/* @media (max-width: 1461px) {
 
     .contents dl {
         display: flex;
@@ -461,7 +463,7 @@ article img {
     .contents dd {
         width: 25%;
     }
-}
+} */
 
 @media (max-width: 1220px) {
     .album {
@@ -660,7 +662,7 @@ article img {
     }
 
     .text-box {
-        width: 400px;
+        width: auto;
         height: 240px;
         top: 60%;
         left: 5%;
@@ -706,6 +708,72 @@ article img {
         width: 340px;
         font-size: 1.25rem;
         margin: 30px auto;
+    }
+
+
+}
+
+
+@media(max-width:580px) {
+
+    .text-box {
+        width: auto;
+        height: 170px;
+        top: 75%;
+        left: 5%;
+        right: 5%;
+    }
+
+    .text h2 {
+        font-size: 1rem;
+    }
+
+    .text p {
+        font-size: 0.75rem;
+    }
+
+    .container {
+        height: 100px;
+    }
+
+    .section-title {
+        font-size: 1.25rem;
+        height: 50px;
+        margin: 50px auto;
+        /* border: blue 1px solid; */
+    }
+
+    article {
+        height: 525px;
+    }
+
+    article img {
+        width: 100%;
+        height: 250px;
+    }
+   
+
+    .inner {
+        width: 80%;
+        height: 50px;
+    }
+    
+    .inner .namber {
+        font-size: 1.75em;
+        padding: 0 20px;
+    }
+    
+    .inner .course {
+        font-size: 1.125rem;
+        align-items: center;
+        margin-top: 7px;
+
+        /* border: red 1px solid; */
+    }
+    
+
+    .contents dl {
+        font-size: 0.875rem;
     }
 
 
