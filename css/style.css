@@ -718,11 +718,16 @@ article img {
 
     .text-box {
         width: auto;
-        height: 170px;
+        height: 150px;
         top: 75%;
-        left: 5%;
-        right: 5%;
+        left: 15%;
+        right: 15%;
     }
+
+    .text {
+        width: 85%;
+        margin: 2% auto;
+    }    
 
     .text h2 {
         font-size: 1rem;
@@ -776,5 +781,52 @@ article img {
         font-size: 0.875rem;
     }
 
+/* access */
+.display {
+    height: 400px;
+    /* margin: 0 8%; */
+}
+
+.map {
+    height: 200px;
+}
+
+.access {
+    width: 100%;
+    border: red 1px solid;
+}
+
+.accesspoint {
+    font-size: 0.875rem;
+    border: blue 1px solid;
+}
+
+/* footer */
+
+#footer ul {
+    font-size: 0.75rem;
+    margin: 70px 10% 30px 10%;
+    text-align: center;
+    border: blue 1px solid;
+}
+
+#footer li {
+    width: 25%;
+    display: inline-block;
+    margin: 0 auto;
+    border: red 1px solid;
+}
+
+#footer li a {
+    padding-right: 0px;
+}
+
+#footer li i {
+    font-size: 1.25rem;
+}
+
+.footernav p {
+    font-size: 0.625rem;
+}
 
 }
